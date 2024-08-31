@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private Sprite[] bulletSprites;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float moveSpeed = 22f;
     [SerializeField] private float timeBeforeBulletDisapear = 3f;
+
+    private void Awake()
+    {
+        spriteRenderer.sprite = bulletSprites[Random.Range(0, bulletSprites.Length)];
+    }
 
     private void Update()
     {

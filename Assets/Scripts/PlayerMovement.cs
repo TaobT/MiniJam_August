@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private TrailRenderer tr;
+    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private Sprite spritePowerUp;
+    [SerializeField] private Sprite spriteNormal;
     [SerializeField] private float powerUpDuration = 5f;
     [SerializeField] private float powerDownDuration = 5f;
     [SerializeField] private Health health;
@@ -35,12 +38,14 @@ public class PlayerMovement : MonoBehaviour
             speed = 10f;
             tr.emitting = true;
             powerUpTime -= Time.deltaTime;
+            sr.sprite = spritePowerUp;
         }
         else
         {
             isPoweredUp = false;
             speed = 8f;
             tr.emitting = false;
+            sr.sprite = spriteNormal;
         }
 
         if(powerDownTime > 0)

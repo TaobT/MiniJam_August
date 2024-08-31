@@ -39,16 +39,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: knife variant 1 v1Sprite
+      name: 
       originalName: 
-      pivot: {x: 0.4998169, y: 0.50029}
+      pivot: {x: 0, y: 0}
       alignment: 0
-      border: {x: 0, y: 0, z: 862, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1193
-        height: 195
-      spriteID: 744cae28687bff94da3615886b3f77fa
+        width: 0
+        height: 0
+      spriteID: 24d262f85b5361842bdc44261a794625
     PhysicsOutlines: []
