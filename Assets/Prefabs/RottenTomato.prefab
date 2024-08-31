@@ -126,7 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ad639da5834474d8f6b842644bc198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  _spriteRenderer: {fileID: 9010533658327312568}
+  type: 2
+  pickRandomTypeAtStart: 0
+  tomatoSpeedProb: 0.5
+  tomatoHealProb: 0.1
+  tomatoRottenProb: 0.4
   healthLoseTime: 5
 --- !u!61 &4143272354780806522
 BoxCollider2D:

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8969553232511513103}
   - component: {fileID: -3635714145633250061}
   - component: {fileID: -90474020713597596}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: BossBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -171,3 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f5e932871b5cb9458c25a9f720ea24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 12
+  timeBeforeBulletDisapear: 3

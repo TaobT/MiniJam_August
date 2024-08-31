@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{
-    [SerializeField] private float speed = 5f;
+{    
+    [SerializeField] private float normalSpeed = 8f;
+    [SerializeField] private float tomatoSpeed = 10f;
+    [SerializeField] private float rottenSpeed = 5f;
+    [SerializeField] private int tomatoHeal = 5;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private SpriteRenderer sr;
@@ -21,9 +24,16 @@ public class PlayerMovement : MonoBehaviour
     private bool isPowerDown = false;
     private bool isPoweredUp = false;
 
+    private float currentSpeed;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        currentSpeed = normalSpeed;
     }
 
     private void Update()
@@ -35,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         if (powerUpTime > 0 && !isPowerDown)
         {
             isPoweredUp = true;
-            speed = 10f;
+            currentSpeed = tomatoSpeed;
             tr.emitting = true;
             powerUpTime -= Time.deltaTime;
             sr.sprite = spritePowerUp;
@@ -43,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             isPoweredUp = false;
-            speed = 8f;
+            currentSpeed = normalSpeed;
             tr.emitting = false;
             sr.sprite = spriteNormal;
         }
@@ -51,19 +61,19 @@ public class PlayerMovement : MonoBehaviour
         if(powerDownTime > 0)
         {
             isPowerDown = true;
-            speed = 5f;
+            currentSpeed = rottenSpeed;
             powerDownTime -= Time.deltaTime;
 
         } else if(!isPoweredUp)
         {
             isPowerDown = false;
-            speed = 8f;
+            currentSpeed = 8f;
         }
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
+        rb.MovePosition(rb.position + movement.normalized * currentSpeed * Time.fixedDeltaTime);
     }
 
     private void AdjustPlayerFacingDirection()
@@ -93,5 +103,10 @@ public class PlayerMovement : MonoBehaviour
     public void PowerDown()
     {
         powerDownTime += powerDownDuration;
+    }
+
+    public void HealUp()
+    {
+        health.Heal(tomatoHeal);
     }
 }

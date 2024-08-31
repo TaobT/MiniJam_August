@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -3924161916892500143}
   - component: {fileID: 5407788620634017826}
   - component: {fileID: 4143272354780806522}
-  m_Layer: 0
-  m_Name: Tomato
+  m_Layer: 14
+  m_Name: PickableTomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.227, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -126,6 +126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ad639da5834474d8f6b842644bc198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 9010533658327312568}
+  type: 0
+  pickRandomTypeAtStart: 1
+  tomatoSpeedProb: 0.5
+  tomatoHealProb: 0.1
+  tomatoRottenProb: 0.4
+  healthLoseTime: 5
 --- !u!61 &4143272354780806522
 BoxCollider2D:
   m_ObjectHideFlags: 0

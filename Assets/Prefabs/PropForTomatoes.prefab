@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5822131756354882463}
   - component: {fileID: 5150565031001741055}
   - component: {fileID: 7646533898943348233}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PropForTomatoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

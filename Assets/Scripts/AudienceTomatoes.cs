@@ -54,4 +54,13 @@ public class AudienceTomatoes : MonoBehaviour
             tomato.GetComponent<TomatoProjectile>().SetLandingPosition(tomatoLandingPosition, true);
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(playerTransform.position, tomatoLandingRadio);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(new Vector2(shootingYPoint.position.x - shootingXRange, shootingYPoint.position.y), new Vector2(shootingYPoint.position.x + shootingXRange, shootingYPoint.position.y));
+    }
 }

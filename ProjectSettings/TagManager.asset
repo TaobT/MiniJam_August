@@ -17,11 +17,11 @@ TagManager:
   - Bullet
   - Boss
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerHurtbox
+  - BossPropsHurtbox
+  - PlayerHitbox
+  - BossHitbox
+  - PickableItems
   - 
   - 
   - 
