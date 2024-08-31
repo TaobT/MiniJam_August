@@ -4,53 +4,38 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Values")]
-    [SerializeField] private float speed = 8f;
-    [SerializeField] private float jumpingPower = 16f;
-
-    private bool isFacingRight = true;
-    private float horizontal;
-
-    [Header("References")]
+    [SerializeField] private float speed = 5f;
     [SerializeField] private Rigidbody2D rb;
-    [Space]
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
 
-    void Update()
+    private Vector2 movement;
+
+    private void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-
-        Flip();
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        AdjustPlayerFacingDirection();
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
     }
 
-    private bool IsGrounded()
+    private void AdjustPlayerFacingDirection()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
 
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        if (mousePos.x < playerScreenPoint.x)
         {
-            isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
+            localScale.z = -1f;
+            transform.localScale = localScale;
+        }
+        else
+        {
+            Vector3 localScale = transform.localScale;
+            localScale.z = 1f;
             transform.localScale = localScale;
         }
     }
