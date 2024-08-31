@@ -2,21 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script makes the boss shoot
 public class Boss : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private float bulletMoveSpeed;
-    [SerializeField] private int burstCount;
-    [SerializeField] private int projectilesPerBurst;
-    [SerializeField][Range(0, 359)] private float angleSpread;
+    [SerializeField] private GameObject bulletPrefab; //Reference of bullet
+    [SerializeField] private float bulletMoveSpeed; //Bullet speed
+    [SerializeField] private int burstCount; //The number of waves of bullets will the boss shoot
+    public int projectilesPerBurst; // The number of bullets shot per wave
+    [Range(0, 359)] public float angleSpread; //Shooting angle
     [SerializeField] private float startingDistance = 0.1f;
-    [SerializeField] private float timeBetweenBursts;
+    [SerializeField] private float timeBetweenBursts; //Time between waves
     [SerializeField] private float restTime = 1f;
-    [SerializeField] private bool stagger;
-    [SerializeField] private bool oscillate;
-    [SerializeField] private Transform player;
+    public bool stagger; 
+    public bool oscillate;
+    [SerializeField] private Transform player; //Reference of player position
+
+    public static Boss instance;
 
     private bool isShooting = false;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void OnValidate()
     {

@@ -8,10 +8,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private float powerUpDuration = 5f;
+    [SerializeField] private float powerDownDuration = 5f;
+    [SerializeField] private Health health;
     public static PlayerMovement Instance { get; private set; }
 
     private Vector2 movement;
     private float powerUpTime;
+    private float powerDownTime;
+    private bool isPowerDown = false;
+    private bool isPoweredUp = false;
 
     private void Awake()
     {
@@ -24,16 +29,31 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         AdjustPlayerFacingDirection();
 
-        if (powerUpTime > 0)
+        if (powerUpTime > 0 && !isPowerDown)
         {
+            isPoweredUp = true;
             speed = 12f;
             tr.emitting = true;
             powerUpTime -= Time.deltaTime;
         }
         else
         {
+            isPoweredUp = false;
             speed = 8f;
             tr.emitting = false;
+        }
+
+        if(powerDownTime > 0)
+        {
+            isPowerDown = true;
+            speed = 5f;
+            powerDownTime -= Time.deltaTime;
+
+        } else if(!isPoweredUp)
+        {
+            isPowerDown = false;
+            speed = 8f;
+            health.Heal(1);
         }
     }
 
@@ -64,5 +84,11 @@ public class PlayerMovement : MonoBehaviour
     public void PowerUp()
     {
         powerUpTime += powerUpDuration;
+    }
+
+    public void PowerDown()
+    {
+        powerDownTime += powerDownDuration;
+        health.TakeDamage(1);
     }
 }

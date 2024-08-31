@@ -1030,6 +1030,8 @@ MonoBehaviour:
   rb: {fileID: 1389371026}
   tr: {fileID: 1389371031}
   powerUpDuration: 5
+  powerDownDuration: 5
+  health: {fileID: 1389371032}
 --- !u!61 &1389371030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1511,6 +1513,7 @@ GameObject:
   - component: {fileID: 2042841528}
   - component: {fileID: 2042841530}
   - component: {fileID: 2042841532}
+  - component: {fileID: 2042841533}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -1653,6 +1656,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2042841533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042841527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228b4239033f3c644b2be198d7844b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rottenTomatoPrefab: {fileID: 140840036729479382, guid: beddf33a75bcd534c83721aa7a55a947, type: 3}
+  spawnTime: 10
 --- !u!1 &2071200809
 GameObject:
   m_ObjectHideFlags: 0

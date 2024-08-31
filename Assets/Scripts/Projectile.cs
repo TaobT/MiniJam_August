@@ -32,11 +32,10 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(collision.gameObject.tag == "Boss" && boss)
+        /*if(collision.gameObject.tag == "Boss")
         {
-            health.TakeDamage(1);
             Destroy(gameObject);
-        }
+        }*/
     }
 
     public void UpdateMoveSpeed(float speed)

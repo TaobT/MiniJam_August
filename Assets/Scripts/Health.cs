@@ -21,4 +21,9 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Heal(int healAmount)
+    {
+        currentHealth += healAmount;
+    }
 }
