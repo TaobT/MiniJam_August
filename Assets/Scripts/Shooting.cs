@@ -9,13 +9,18 @@ public class Shooting : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
 
     [Header("Stats")]
-    [SerializeField] private float timeBetweenBullets;
+    [SerializeField] private float fireRate;
+    private float fireTimer;
  
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && fireTimer <= 0)
         {
             Shoot();
+            fireTimer = fireRate;
+        } else
+        {
+            fireTimer -= Time.deltaTime;
         }
 
         Rotation();
