@@ -28,19 +28,10 @@ public class Shooting : MonoBehaviour
 
     private void Rotation()
     {
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
-
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-        if (mousePos.x < playerScreenPoint.x)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, angle * 1.5f);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, 0, angle * 1.5f);
-        }
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 lookDir = mousePos - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     private void Shoot()
