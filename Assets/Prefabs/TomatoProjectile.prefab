@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb32119938f1e144aea477acb96d155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tomatoSplatterPrefab: {fileID: 2214263739200214460, guid: 9e6ccd9406ec5114bba113f07d7f905f, type: 3}
+  pickableTomatoPrefab: {fileID: 140840036729479382, guid: 285ac58d5350a3d46ac24e8999b6c671, type: 3}
   maxSpeed: 10
   minSpeed: 5
 --- !u!96 &-178347673529567905
