@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class BossProjectile : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 22f;
+    [SerializeField] private float moveSpeed = 12f;
     [SerializeField] private float timeBeforeBulletDisapear = 3f;
 
     private void Update()
@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
     {
         Health health = collision.gameObject.GetComponent<Health>();
 
-        if(collision.gameObject.tag == "Boss")
+        if (collision.gameObject.tag == "Player")
         {
             health.TakeDamage(1);
             Destroy(gameObject);

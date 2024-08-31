@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3871182327221417998}
   - component: {fileID: 9103917643249223290}
-  - component: {fileID: 7912653979444147365}
   - component: {fileID: -8969553232511513103}
   - component: {fileID: -3635714145633250061}
+  - component: {fileID: -90474020713597596}
   m_Layer: 7
-  m_Name: Bullet
+  m_Name: BossBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,20 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7912653979444147365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2501138708763681342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2ad0b6f0b23f74da9bcb2c9b8cc7b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 22
-  timeBeforeBulletDisapear: 3
 --- !u!50 &-8969553232511513103
 Rigidbody2D:
   serializedVersion: 4
@@ -173,3 +159,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-90474020713597596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2501138708763681342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5e932871b5cb9458c25a9f720ea24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

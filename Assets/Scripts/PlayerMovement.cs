@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if (powerUpTime > 0 && !isPowerDown)
         {
             isPoweredUp = true;
-            speed = 12f;
+            speed = 10f;
             tr.emitting = true;
             powerUpTime -= Time.deltaTime;
         }
@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isPowerDown = false;
             speed = 8f;
-            health.Heal(1);
         }
     }
 
@@ -89,6 +88,5 @@ public class PlayerMovement : MonoBehaviour
     public void PowerDown()
     {
         powerDownTime += powerDownDuration;
-        health.TakeDamage(1);
     }
 }

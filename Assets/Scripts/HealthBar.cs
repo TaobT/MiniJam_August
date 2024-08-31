@@ -7,9 +7,10 @@ public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Image healthBar;
     [SerializeField] private Health health;
+    [SerializeField] private float rate;
 
     private void Update()
     {
-        healthBar.fillAmount = health.currentHealth / 10f;
+        healthBar.fillAmount = health.currentHealth / rate;
     }
 }

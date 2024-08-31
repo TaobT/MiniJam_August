@@ -615,6 +615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 942471114}
+  - component: {fileID: 942471115}
   m_Layer: 5
   m_Name: BossHealth
   m_TagString: Untagged
@@ -642,6 +643,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &942471115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942471113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e976628c42b80f647a16b6cdd33fece5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1088241906}
+  health: {fileID: 2042841534}
+  rate: 100
 --- !u!1 &1084329933
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 18339856}
   health: {fileID: 1389371032}
+  rate: 10
 --- !u!1 &1088241904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1531,8 @@ GameObject:
   - component: {fileID: 2042841530}
   - component: {fileID: 2042841532}
   - component: {fileID: 2042841533}
-  m_Layer: 0
+  - component: {fileID: 2042841534}
+  m_Layer: 8
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -1533,7 +1551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d96e2e2efa6e8c4ca5e5dfc6d8f8569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2501138708763681342, guid: edffb48f2625ae64baedca8f19c77b8d, type: 3}
+  bulletPrefab: {fileID: 2501138708763681342, guid: 4b53179c2f6384f4fa68b7727c8b02fc, type: 3}
   bulletMoveSpeed: 12
   burstCount: 5
   projectilesPerBurst: 20
@@ -1670,6 +1688,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rottenTomatoPrefab: {fileID: 140840036729479382, guid: beddf33a75bcd534c83721aa7a55a947, type: 3}
   spawnTime: 10
+--- !u!114 &2042841534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042841527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca8ef166619b624cb69c7f7b9f6630a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  currentHealth: 0
 --- !u!1 &2071200809
 GameObject:
   m_ObjectHideFlags: 0
