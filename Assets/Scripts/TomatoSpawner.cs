@@ -16,7 +16,7 @@ public class TomatoSpawner : MonoBehaviour
     {
         spawnInterval = Random.Range(12f, 20f);
 
-        Vector2 randomSpawnPosition = new Vector3(Random.Range(-11, 11), 6);
+        Vector2 randomSpawnPosition = new Vector3(Random.Range(-11, 11), Random.Range(5, -5f));
         Instantiate(tomatoPrefab, randomSpawnPosition, Quaternion.identity);
 
         Invoke("Spawn", spawnInterval);

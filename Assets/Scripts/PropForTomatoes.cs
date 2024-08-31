@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PropForTomatoes : MonoBehaviour
 {
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision == null) return;

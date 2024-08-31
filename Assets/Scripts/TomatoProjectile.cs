@@ -14,7 +14,6 @@ public class TomatoProjectile : MonoBehaviour
     private float speed;
     private Vector2 landingPosition = Vector2.zero;
     private bool isSplatt;
-
     public void SetLandingPosition(Vector2 landingPosition, bool splatt)
     {
         speed = Random.Range(minSpeed, maxSpeed);
@@ -39,7 +38,7 @@ public class TomatoProjectile : MonoBehaviour
             }
             else
             {
-                //TODO: Instantiate pickable tomato
+                Instantiate(pickableTomatoPrefab, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }

@@ -21,9 +21,26 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        GetComponent<Health>().TakeDamage(1);
-        Destroy(gameObject);
+        Health health = collision.gameObject.GetComponent<Health>();
+        Boss boss = collision.gameObject.GetComponent<Boss>();
+
+        if(collision.gameObject.tag == "Player")
+        {
+            health.TakeDamage(1);
+            Destroy(gameObject);
+        }
+
+        if(collision.gameObject.tag == "Boss" && boss)
+        {
+            health.TakeDamage(1);
+            Destroy(gameObject);
+        }
+    }
+
+    public void UpdateMoveSpeed(float speed)
+    {
+        moveSpeed = speed;
     }
 }
