@@ -39,11 +39,6 @@ public class Boss : MonoBehaviour
         if (bulletMoveSpeed <= 0) { bulletMoveSpeed = 0.1f; }
     }
 
-    private void Start()
-    {
-        Attack();
-    }
-
     public void Attack()
     {
         if (!isShooting)

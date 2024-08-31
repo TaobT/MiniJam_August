@@ -724,7 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1088241906}
   health: {fileID: 2042841534}
-  rate: 0
+  rate: 100
 --- !u!1 &970281976
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 18339856}
   health: {fileID: 1389371032}
-  rate: 0
+  rate: 10
 --- !u!1 &1088241904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,7 +1842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2042841528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1992,6 +1992,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rottenTomatoPrefab: {fileID: 140840036729479382, guid: beddf33a75bcd534c83721aa7a55a947, type: 3}
   spawnTime: 10
+  bullet: {fileID: 2501138708763681342, guid: 4b53179c2f6384f4fa68b7727c8b02fc, type: 3}
+  bulletLife: 1
+  speed: 1
+  spawnerType: 0
+  firingRate: 1
+  minRandomMoveTime: 3
+  maxRandomMoveTime: 8
+  bossHealth: {fileID: 2042841534}
 --- !u!114 &2042841534
 MonoBehaviour:
   m_ObjectHideFlags: 0

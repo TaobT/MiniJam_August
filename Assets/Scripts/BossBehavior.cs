@@ -8,6 +8,25 @@ public class BossBehavior : MonoBehaviour
     [SerializeField] private GameObject rottenTomatoPrefab;
     [SerializeField] private int spawnTime;
 
+    enum SpawnerType { Straight, Spin }
+    [Header("Bullet Attributes")]
+    public GameObject bullet;
+    public float bulletLife = 1f;
+    public float speed = 1f;
+
+
+    [Header("Spawner Attributes")]
+    [SerializeField] private SpawnerType spawnerType;
+    [SerializeField] private float firingRate = 1f;
+
+    [Header("Boss Moves")]
+    [SerializeField] private float minRandomMoveTime;
+    [SerializeField] private float maxRandomMoveTime;
+    [SerializeField] private Health bossHealth;
+
+    private GameObject spawnedBullet;
+    private float timer = 0f;
+
     private void Start()
     {
         int random = Random.Range(0, 1);
@@ -23,8 +42,15 @@ public class BossBehavior : MonoBehaviour
 
     private void Update()
     {
-        float randomMoveTime = Random.Range(3, 8);
-        int randomMove = Random.Range(0, 3);
+        if (bossHealth.currentHealth < 50)
+        {
+            minRandomMoveTime = 2;
+            maxRandomMoveTime = 5;
+        }
+
+        float randomMoveTime = Random.Range(minRandomMoveTime, maxRandomMoveTime);
+
+        int randomMove = Random.Range(0, 4);
 
         if(randomMoveTimer <= 0)
         {
@@ -38,6 +64,9 @@ public class BossBehavior : MonoBehaviour
             } else if (randomMove == 2)
             {
                 Teleport();
+            } else if(randomMove == 3)
+            {
+                SpinPatern();
             }
 
             randomMoveTimer = randomMoveTime;
@@ -75,4 +104,15 @@ public class BossBehavior : MonoBehaviour
             Instantiate(rottenTomatoPrefab, randomSpawnPosition, Quaternion.identity);
         }
     }
+
+    private void SpinPatern()
+    {
+        if (bullet)
+        {
+            spawnedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+            spawnedBullet.transform.rotation = transform.rotation;
+        }
+    }
+
+
 }
