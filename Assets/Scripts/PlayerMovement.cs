@@ -3,19 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{    
+{
+    [Header("PowerUp")]
     [SerializeField] private float normalSpeed = 8f;
     [SerializeField] private float tomatoSpeed = 10f;
     [SerializeField] private float rottenSpeed = 5f;
     [SerializeField] private int tomatoHeal = 5;
+    [Space]
+    [SerializeField] private float powerUpDuration = 5f;
+    [SerializeField] private float powerDownDuration = 5f;
+
+    [Header("References")]
     [SerializeField] private Rigidbody2D rb;
+    [Space]
     [SerializeField] private TrailRenderer tr;
+    [Space]
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Sprite spritePowerUp;
     [SerializeField] private Sprite spriteNormal;
-    [SerializeField] private float powerUpDuration = 5f;
-    [SerializeField] private float powerDownDuration = 5f;
+    [Space]
     [SerializeField] private Health health;
+    [Space]
+    [SerializeField] private Camera playerCam;
     public static PlayerMovement Instance { get; private set; }
 
     private Vector2 movement;
@@ -23,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private float powerDownTime;
     private bool isPowerDown = false;
     private bool isPoweredUp = false;
+    private Vector2 mousePos;
 
     private float currentSpeed;
 
@@ -110,6 +120,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement.normalized * currentSpeed * Time.fixedDeltaTime);
+
+        Vector2 lookDir = mousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
+        rb.rotation = angle;
     }
 
     private void AdjustPlayerFacingDirection()
