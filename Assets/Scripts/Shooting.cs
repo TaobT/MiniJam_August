@@ -11,10 +11,6 @@ public class Shooting : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float fireRate;
     private float fireTimer;
-
-    //AudioVariables
-
-    public AK.Wwise.Event KnifeSFX;
  
     private void Update()
     {
@@ -22,7 +18,6 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
             fireTimer = fireRate;
-            KnifeSFX.Post(gameObject);
         } else
         {
             fireTimer -= Time.deltaTime;

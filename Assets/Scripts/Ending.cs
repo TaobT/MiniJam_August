@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Event = AK.Wwise.Event;
 
 
 
 public class Ending : MonoBehaviour
-
-
-
-
-
 {
     [SerializeField] private GameObject gameOver;
     [SerializeField] private GameObject win;

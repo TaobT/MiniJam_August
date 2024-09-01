@@ -12,9 +12,6 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject boss;
     public int currentHealth;
 
-// AudioVariables
-    public AK.Wwise.Event BossLaugh; 
-
     private void Start()
     {
         currentHealth = health;
@@ -35,16 +32,6 @@ public class Health : MonoBehaviour
             Destroy(player);
             Destroy(gameObject);
         }
-
-        // Audio
-
-        if(currentHealth == 50)
-        {
-            BossLaugh.Post(gameObject);
-
-
-        }
-
     }
 
     public void Heal(int healAmount)
