@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
     private float currentSpeed;
 
+    //AudioVariables
+
+    public AK.Wwise.Event Footsteps; 
+    public float stepRate = 0.3f;
+    public float stepCoolDown = 0.0f;
+
     private void Awake()
     {
         Instance = this;
@@ -68,6 +74,36 @@ public class PlayerMovement : MonoBehaviour
         {
             isPowerDown = false;
             currentSpeed = 8f;
+        }
+
+        //Audio
+
+         stepCoolDown -= Time.deltaTime;
+
+        if (Input.GetButton("Vertical"))  
+        {
+            if (stepCoolDown <= 0.0f)
+            {
+                Footsteps.Post(gameObject);   
+                stepCoolDown = 0.5f;
+
+            }
+          
+        }
+
+         if (Input.GetButton("Horizontal"))  
+        {
+            if (stepCoolDown <= 0.0f)
+            {
+                Footsteps.Post(gameObject);   
+                stepCoolDown = 0.5f;
+
+            }
+          
+        }
+        if (stepCoolDown > 0.0f)
+        {
+            stepCoolDown -= Time.deltaTime;
         }
     }
 

@@ -1,0 +1,57 @@
+Event	ID	Name			Wwise Object Path	Notes
+	107801340	KnifeThrow			\Default Work Unit\KnifeThrow	
+	455185236	TomatoReload			\Default Work Unit\TomatoReload	
+	589468178	TomatoSplash			\Default Work Unit\TomatoSplash	
+	1205645828	MusicPlay			\Default Work Unit\MusicPlay	
+	1794747505	BossDamage			\Default Work Unit\BossDamage	
+	1816659375	UISelect			\Default Work Unit\UISelect	
+	1905638982	TomatoSpeedPlay			\Default Work Unit\TomatoSpeedPlay	
+	2136433081	MenuMusicStop			\Default Work Unit\MenuMusicStop	
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+	3006414291	MenuMusicPlay			\Default Work Unit\MenuMusicPlay	
+	3485698645	BossLaugh			\Default Work Unit\BossLaugh	
+	3715063608	TomatoSpeedStop			\Default Work Unit\TomatoSpeedStop	
+	3978196478	MusicStop			\Default Work Unit\MusicStop	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	Concrete	Footsteps			
+	2003927601	Puddle	Footsteps			
+	2195636714	Dirt	Footsteps			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3494343696	PauseMenu			\Default Work Unit\PauseMenu	
+
+State	ID	Name	State Group			Notes
+	748895195	None	PauseMenu			
+	1256202815	Play	PauseMenu			
+	3092587493	Pause	PauseMenu			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1763041431	MusicSpeed			\Default Work Unit\GameMechanics\MusicSpeed	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	77308352	FootstepsWet1	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootstepsWet1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Puddle\FootstepsWet1		66096
+	210105918	FootstepsWet2	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootstepsWet2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Puddle\FootstepsWet2		36096
+	222439631	KnifeThrow	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\KnifeThrow_BA0324A3.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\KnifeThrow		90800
+	248774992	MainMusic	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\Voices\English(US)\tomatogamemusic1_D03742A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\NonInteractiveMusic\MainMusic		8448144
+	270086448	TomatoSplash_1	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\TomatoSplash_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TomatoSplash\TomatoSplash_1		29348
+	414743651	FootStep_Concrete_2	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootStep_Concrete_2_BFCA8FB0.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Concrete\FootStep_Concrete_2		20176
+	479857460	FootStep_Dirt_1	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootStep_Dirt_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Dirt\FootStep_Dirt_1		66096
+	503237997	TomatoSplash_2	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\TomatoSplash_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TomatoSplash\TomatoSplash_2		96096
+	692776737	TomatoSpeed	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\Voices\English(US)\tomatospeed_BD882FAF.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\TomatoSpeed		3072144
+	699652049	FootStep_Dirt_2	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootStep_Dirt_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Dirt\FootStep_Dirt_2		85024
+	702820270	BossDamage_2	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\BossDamage_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\BossDamage\BossDamage_2		66096
+	767109291	TomatoPowerReload	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\Voices\English(US)\TomatoPowerReload_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\TomatoPowerReload		159096
+	767723280	FootstepsWet3	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootstepsWet3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Puddle\FootstepsWet3		62232
+	842153895	FootstepsWet4	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootstepsWet4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Puddle\FootstepsWet4		52516
+	855455731	FootstepsWet5	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootstepsWet5_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Puddle\FootstepsWet5		61928
+	930756864	MenuMusic	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\Voices\English(US)\MenuMusic_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\NonInteractiveMusic\MenuMusic		4096096
+	946581995	UISelect	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\Voices\English(US)\LJ_UISFX_14_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UISelect		29112
+	990391901	BossDamage_1	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\BossDamage_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\BossDamage\BossDamage_1		76596
+	1003459936	BossLaugh	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\Voices\English(US)\BossLaugh_92C66FC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boss\BossLaugh		325596
+	1004797339	FootStep_Concrete_1	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\FootStep_Concrete_1_24159896.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerMechanics\Footsteps\Concrete\FootStep_Concrete_1		18412
+	1037537007	TomatoSplash_3	C:\Users\Elias\Documents\WwiseProjects\TomatoGame\.cache\Windows\SFX\TomatoSplash_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\TomatoSplash\TomatoSplash_3		48284
+

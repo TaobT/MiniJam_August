@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>C:/Users/Elias/Documents/WwiseProjects/TomatoGame</ProjectRoot>
+		<SourceFilesRoot>C:/Users/Elias/Documents/WwiseProjects/TomatoGame/.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:/Users/Elias/Documents/WwiseProjects/TomatoGame/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5D910152-E7A3-BDC6-8803-EC961293EE57}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="555076300" Name="TomatoPowerLevel"/>
+				<GameParameter Id="988953028" Name="SFXVolume"/>
+				<GameParameter Id="1763041431" Name="MusicSpeed"/>
+				<GameParameter Id="1843561328" Name="MainVolume"/>
+				<GameParameter Id="2346531308" Name="MusicVolume"/>
+				<GameParameter Id="3415057477" Name="UIVolume"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3494343696" Name="PauseMenu">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1256202815" Name="Play"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="Footsteps">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="2003927601" Name="Puddle"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="2880737896" Type="User" Language="English(US)" Hash="{76E0DE0C-68E8-0349-0092-0C4D497335C6}">
+			<ShortName>MainBank</ShortName>
+			<Path>English(US)/MainBank.bnk</Path>
+			<Media>
+				<File Id="77308352" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootstepsWet1.wav</ShortName>
+					<CachePath>SFX/FootstepsWet1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="210105918" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootstepsWet2.wav</ShortName>
+					<CachePath>SFX/FootstepsWet2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="222439631" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>KnifeThrow.wav</ShortName>
+					<CachePath>SFX/KnifeThrow_BA0324A3.wem</CachePath>
+				</File>
+				<File Id="248774992" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>tomatogamemusic1.wav</ShortName>
+					<CachePath>Voices/English(US)/tomatogamemusic1_D03742A1.wem</CachePath>
+				</File>
+				<File Id="270086448" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TomatoSplash_1.wav</ShortName>
+					<CachePath>SFX/TomatoSplash_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="414743651" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStep_Concrete_2.wav</ShortName>
+					<CachePath>SFX/FootStep_Concrete_2_BFCA8FB0.wem</CachePath>
+				</File>
+				<File Id="479857460" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStep_Dirt_1.wav</ShortName>
+					<CachePath>SFX/FootStep_Dirt_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="503237997" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TomatoSplash_2.wav</ShortName>
+					<CachePath>SFX/TomatoSplash_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="692776737" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>tomatospeed.wav</ShortName>
+					<CachePath>Voices/English(US)/tomatospeed_BD882FAF.wem</CachePath>
+				</File>
+				<File Id="699652049" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStep_Dirt_2.wav</ShortName>
+					<CachePath>SFX/FootStep_Dirt_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="702820270" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossDamage_2.wav</ShortName>
+					<CachePath>SFX/BossDamage_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="767109291" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>TomatoPowerReload.wav</ShortName>
+					<CachePath>Voices/English(US)/TomatoPowerReload_818F3B66.wem</CachePath>
+				</File>
+				<File Id="767723280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootstepsWet3.wav</ShortName>
+					<CachePath>SFX/FootstepsWet3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="842153895" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootstepsWet4.wav</ShortName>
+					<CachePath>SFX/FootstepsWet4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="855455731" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootstepsWet5.wav</ShortName>
+					<CachePath>SFX/FootstepsWet5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="930756864" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>MenuMusic.wav</ShortName>
+					<CachePath>Voices/English(US)/MenuMusic_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="946581995" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>LJ_UISFX_14.wav</ShortName>
+					<CachePath>Voices/English(US)/LJ_UISFX_14_818F3B66.wem</CachePath>
+				</File>
+				<File Id="990391901" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossDamage_1.wav</ShortName>
+					<CachePath>SFX/BossDamage_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1003459936" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>BossLaugh.wav</ShortName>
+					<CachePath>Voices/English(US)/BossLaugh_92C66FC9.wem</CachePath>
+				</File>
+				<File Id="1004797339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStep_Concrete_1.wav</ShortName>
+					<CachePath>SFX/FootStep_Concrete_1_24159896.wem</CachePath>
+				</File>
+				<File Id="1037537007" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TomatoSplash_3.wav</ShortName>
+					<CachePath>SFX/TomatoSplash_3_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1794747505" Name="BossDamage" DurationType="OneShot" DurationMin="0.2761642" DurationMax="0.46086797">
+					<MediaRefs>
+						<MediaRef Id="702820270"/>
+						<MediaRef Id="990391901"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3485698645" Name="BossLaugh" DurationType="OneShot" DurationMin="1.5992378" DurationMax="1.8778101">
+					<MediaRefs>
+						<MediaRef Id="1003459936"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2385628198" Name="Footsteps" DurationType="OneShot" DurationMin="0.076635435" DurationMax="0.5426921">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="841620460" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="414743651"/>
+								<MediaRef Id="1004797339"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2003927601"/>
+							<MediaRefs>
+								<MediaRef Id="77308352"/>
+								<MediaRef Id="210105918"/>
+								<MediaRef Id="767723280"/>
+								<MediaRef Id="842153895"/>
+								<MediaRef Id="855455731"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2195636714"/>
+							<MediaRefs>
+								<MediaRef Id="479857460"/>
+								<MediaRef Id="699652049"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="107801340" Name="KnifeThrow" DurationType="OneShot" DurationMin="0.31403077" DurationMax="0.4862638">
+					<MediaRefs>
+						<MediaRef Id="222439631"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3006414291" Name="MenuMusicPlay" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="930756864"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2136433081" Name="MenuMusicStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1205645828" Name="MusicPlay" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="248774992"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3978196478" Name="MusicStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="455185236" Name="TomatoReload" DurationType="OneShot" DurationMin="0.828125" DurationMax="0.828125">
+					<MediaRefs>
+						<MediaRef Id="767109291"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1905638982" Name="TomatoSpeedPlay" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="692776737"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3715063608" Name="TomatoSpeedStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="589468178" Name="TomatoSplash" DurationType="OneShot" DurationMin="0.11714231" DurationMax="0.60429853">
+					<MediaRefs>
+						<MediaRef Id="270086448"/>
+						<MediaRef Id="503237997"/>
+						<MediaRef Id="1037537007"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1816659375" Name="UISelect" DurationType="OneShot" DurationMin="0.16448979" DurationMax="0.16448979">
+					<MediaRefs>
+						<MediaRef Id="946581995"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1763041431" Name="MusicSpeed"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="Footsteps">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="2003927601" Name="Puddle"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{CBE3DB2C-447D-BA9A-100F-2B725B327FE3}</FileHash>
+</SoundBanksInfo>
