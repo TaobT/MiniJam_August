@@ -49,7 +49,6 @@ public class Boss : MonoBehaviour
 
     private IEnumerator ShootRoutine()
     {
-        Debug.Log("Shoot");
         isShooting = true;
 
         float startAngle, currentAngle, angleStep, endAngle;

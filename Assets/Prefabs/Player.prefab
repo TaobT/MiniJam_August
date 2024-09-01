@@ -146,7 +146,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3852535834656100506}
@@ -253,7 +253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!96 &9053838825738826301
 TrailRenderer:
@@ -381,12 +381,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  currentHealth: 0
   isPlayer: 1
   isBoss: 0
+  isMinion: 0
   victoryTimeline: {fileID: 0}
   player: {fileID: 2979607869744526731}
   boss: {fileID: 0}
-  currentHealth: 0
+  bossDamage: []
 --- !u!1 &4174624610300329837
 GameObject:
   m_ObjectHideFlags: 0

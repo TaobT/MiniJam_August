@@ -33,14 +33,16 @@ public class BossBehavior : MonoBehaviour
 
     private GameObject spawnedBullet;
     private float timer;
+    private bool halfWay = false;
 
     private void Update()
     {
-        if (bossHealth.currentHealth < 50)
+        if (bossHealth.currentHealth < 50 && halfWay == false)
         {
             minRandomMoveTime = 2;
             maxRandomMoveTime = 5;
             AudioManager.instance.PlaySFX(bossLaugh);
+            halfWay = true;
         }
 
         float randomMoveTime = Random.Range(minRandomMoveTime, maxRandomMoveTime);
@@ -113,7 +115,7 @@ public class BossBehavior : MonoBehaviour
 
         for (int i = 0; i < rottenTomatoSpawnAmount; i++)
         {
-            Vector2 randomSpawnPosition = new Vector3(Random.Range(-18, 18), 6);
+            Vector2 randomSpawnPosition = new Vector3(Random.Range(-18, 18), 8);
             Instantiate(rottenTomatoPrefab, randomSpawnPosition, Quaternion.identity);
         }
     }

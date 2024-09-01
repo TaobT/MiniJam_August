@@ -28,9 +28,13 @@ public class BossProjectile : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             health.TakeDamage(1);
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+        if(collision.gameObject.tag == "Scenerio")
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void UpdateMoveSpeed(float speed)

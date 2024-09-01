@@ -541,7 +541,7 @@ Transform:
   m_GameObject: {fileID: 60227885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -563,6 +563,8 @@ MonoBehaviour:
   minTimeToSpawn: 3
   props:
   - {fileID: 8243808590127332509, guid: 19d30feb863b0594f9ae3daafca98ebe, type: 3}
+  - {fileID: 8243808590127332509, guid: 7a536625a12e51643b775bded8642b13, type: 3}
+  - {fileID: 8243808590127332509, guid: 4d76f31870af1f8439f1c7867b817b37, type: 3}
 --- !u!1001 &68276452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1655,8 +1657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 225.55579, y: -38.444214}
-  m_SizeDelta: {x: 450, y: 80}
+  m_AnchoredPosition: {x: 225.55579, y: -28.154297}
+  m_SizeDelta: {x: 450, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &209724183
 MonoBehaviour:
@@ -2544,11 +2546,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1097304677}
     m_Modifications:
     - target: {fileID: -3888481672020999207, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_Name
       value: stage curtain v1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
+      propertyPath: m_TagString
+      value: Scenerio
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2576,15 +2582,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5336,6 +5342,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6985059, y: 3.6502936}
   m_EdgeRadius: 0
+--- !u!4 &843692810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
+  m_PrefabInstance: {fileID: 1500518704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &855733808
 GameObject:
   m_ObjectHideFlags: 0
@@ -6384,7 +6395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1088241906}
   health: {fileID: 2042841534}
-  rate: 100
+  rate: 150
 --- !u!4 &946361987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 73edb346ef194194e81e5b7e0306154e, type: 3}
@@ -6527,6 +6538,8 @@ PlayableDirector:
     value: {fileID: 839585155}
   - key: {fileID: -5740268287495444398, guid: 77e883e371d2d2c4a93a28dcc2ca8671, type: 2}
     value: {fileID: 454879695}
+  - key: {fileID: -2749100774606322480, guid: 77e883e371d2d2c4a93a28dcc2ca8671, type: 2}
+    value: {fileID: 166396477}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &965774432
@@ -6557,7 +6570,7 @@ GameObject:
   - component: {fileID: 970281978}
   m_Layer: 0
   m_Name: TopWall
-  m_TagString: Untagged
+  m_TagString: Scenerio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7625,7 +7638,7 @@ GameObject:
   - component: {fileID: 1097304677}
   m_Layer: 0
   m_Name: SCENARIO
-  m_TagString: Untagged
+  m_TagString: Scenerio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7643,6 +7656,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1189292781}
+  - {fileID: 843692810}
   - {fileID: 970281977}
   - {fileID: 1642183619}
   - {fileID: 1130518515}
@@ -7794,7 +7809,7 @@ GameObject:
   - component: {fileID: 1130518516}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: Scenerio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8044,6 +8059,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 73edb346ef194194e81e5b7e0306154e, type: 3}
   m_PrefabInstance: {fileID: 489575865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1189292781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
+  m_PrefabInstance: {fileID: 332270670}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1195948998 stripped
 Transform:
@@ -8960,11 +8980,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1097304677}
     m_Modifications:
     - target: {fileID: -3888481672020999207, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_Name
       value: stage curtain v1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3888481672020999207, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
+      propertyPath: m_TagString
+      value: Scenerio
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalScale.x
@@ -8992,15 +9016,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 8ebc3863bca919e4c8a3bcfdac70282b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9719,7 +9743,7 @@ GameObject:
   - component: {fileID: 1642183620}
   m_Layer: 0
   m_Name: BottomWall
-  m_TagString: Untagged
+  m_TagString: Scenerio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11404,8 +11428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 800, y: 80}
+  m_AnchoredPosition: {x: 0, y: 24.520203}
+  m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1885930415
 MonoBehaviour:
@@ -12757,7 +12781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca8ef166619b624cb69c7f7b9f6630a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 150
   currentHealth: 0
   isPlayer: 0
   isBoss: 1
@@ -13296,5 +13320,3 @@ SceneRoots:
   - {fileID: 915661630}
   - {fileID: 1900890790}
   - {fileID: 1907618496}
-  - {fileID: 1500518704}
-  - {fileID: 332270670}

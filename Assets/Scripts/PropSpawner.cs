@@ -10,6 +10,7 @@ public class PropSpawner : MonoBehaviour
     private bool canSpawn = true;
 
     private float spawnTime;
+    private Vector2 randomPosition;
 
     private void Start()
     {
@@ -18,6 +19,8 @@ public class PropSpawner : MonoBehaviour
 
     private void Update()
     {
+        randomPosition = new Vector2(Random.Range(-17, 17), Random.Range(-7, 7));
+
         if (canSpawn)
         {
             StartCoroutine(SpawnProp());
@@ -28,8 +31,8 @@ public class PropSpawner : MonoBehaviour
     private IEnumerator SpawnProp()
     {
         yield return new WaitForSeconds(spawnTime);
-        GameObject prop = Instantiate(props[Random.Range(0, props.Length)], transform.position, Quaternion.identity);
-        prop.transform.SetParent(transform, false);
+        GameObject prop = Instantiate(props[Random.Range(0, props.Length)], randomPosition, Quaternion.identity);
+        prop.transform.position = randomPosition;
         prop.GetComponent<PropForTomatoes>().SetSpawner(this);
         spawnTime = Random.Range(minTimeToSpawn, maxTimeToSpawn);
     }
