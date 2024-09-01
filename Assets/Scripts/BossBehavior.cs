@@ -86,7 +86,7 @@ public class BossBehavior : MonoBehaviour
         Boss.instance.angleSpread = 359f;
         Boss.instance.oscillate = false;
         Boss.instance.stagger = false;
-        Boss.instance.projectilesPerBurst = 20;
+        Boss.instance.projectilesPerBurst = 30;
         Boss.instance.Attack();
     }
 
@@ -95,7 +95,7 @@ public class BossBehavior : MonoBehaviour
         Boss.instance.angleSpread = 60f;
         Boss.instance.oscillate = true;
         Boss.instance.stagger = true;
-        Boss.instance.projectilesPerBurst = 5;
+        Boss.instance.projectilesPerBurst = 10;
         Boss.instance.Attack();
     }
 

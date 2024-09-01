@@ -19,7 +19,19 @@ public class Minions : MonoBehaviour
         transform.rotation = Quaternion.Euler(Vector3.forward * angle);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Health health = collision.gameObject.GetComponent<Health>();
+
+        if (collision.gameObject.tag == "Player" && !isAttacking)
+        {
+            isAttacking = true;
+            health.TakeDamage(1);
+            StartCoroutine(ResetAttack());
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         Health health = collision.gameObject.GetComponent<Health>();
 
