@@ -1863,8 +1863,8 @@ MonoBehaviour:
   startingDistance: 0.1
   timeBetweenBursts: 0.3
   restTime: 1
-  stagger: 0
-  oscillate: 0
+  stagger: 1
+  oscillate: 1
   player: {fileID: 1389371028}
 --- !u!4 &2042841529
 Transform:
@@ -1991,15 +1991,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rottenTomatoPrefab: {fileID: 140840036729479382, guid: beddf33a75bcd534c83721aa7a55a947, type: 3}
-  spawnTime: 10
+  rottenTomatoSpawnAmount: 10
   bullet: {fileID: 2501138708763681342, guid: 4b53179c2f6384f4fa68b7727c8b02fc, type: 3}
-  bulletLife: 1
-  speed: 1
-  spawnerType: 0
-  firingRate: 1
+  fireRate: 1
   minRandomMoveTime: 3
   maxRandomMoveTime: 8
   bossHealth: {fileID: 2042841534}
+  minionPrefab: {fileID: 7273434788506092267, guid: 8fa2fd117f9b21442922419ceef8ce33, type: 3}
+  minionSpawnAmount: 10
 --- !u!114 &2042841534
 MonoBehaviour:
   m_ObjectHideFlags: 0

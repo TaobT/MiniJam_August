@@ -40,6 +40,18 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Health health = collision.gameObject.GetComponent<Health>();
+
+        if(collision.gameObject.tag == "Minion")
+        {
+            health.TakeDamage(1);
+        }
+
+        Destroy (gameObject);
+    }
+
     public void UpdateMoveSpeed(float speed)
     {
         moveSpeed = speed;
