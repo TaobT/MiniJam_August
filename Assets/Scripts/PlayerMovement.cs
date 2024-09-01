@@ -25,6 +25,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Health health;
     [Space]
     [SerializeField] private Camera playerCam;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] footsteps;
+    [SerializeField] private AudioClip powerUp;
+    [SerializeField] private float timeBeforeNextAudio;
+
     public static PlayerMovement Instance { get; private set; }
 
     private Vector2 movement;
@@ -33,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isPowerDown = false;
     private bool isPoweredUp = false;
     private Vector2 mousePos;
+    private float timeBeforeNextAudioTimer;
 
     private float currentSpeed;
 
@@ -50,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        mousePos = playerCam.ScreenToWorldPoint(Input.mousePosition);
         AdjustPlayerFacingDirection();
 
         if (powerUpTime > 0 && !isPowerDown)
@@ -78,6 +86,16 @@ public class PlayerMovement : MonoBehaviour
         {
             isPowerDown = false;
             currentSpeed = 8f;
+        }
+
+        if (movement.sqrMagnitude > 0 && timeBeforeNextAudioTimer <= 0)
+        {
+            AudioManager.instance.PlaySFX(footsteps[Random.Range(0, footsteps.Length)]);
+            timeBeforeNextAudioTimer = timeBeforeNextAudio;
+        }
+        else
+        {
+            timeBeforeNextAudioTimer -= Time.deltaTime;
         }
     }
 
@@ -112,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
     public void PowerUp()
     {
         powerUpTime += powerUpDuration;
+        AudioManager.instance.PlaySFX(powerUp);
     }
 
     public void PowerDown()

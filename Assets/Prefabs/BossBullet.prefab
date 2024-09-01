@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 12
-  timeBeforeBulletDisapear: 3
+  timeBeforeBulletDisapear: 5
 --- !u!58 &8224442667465991868
 CircleCollider2D:
   m_ObjectHideFlags: 0

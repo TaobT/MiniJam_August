@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3286163911610860551, guid: 3258f2d580a763b4481c8e4c2b7824f7, type: 3}
-  m_Color: {r: 0.4716981, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -133,6 +133,8 @@ MonoBehaviour:
   tomatoHealProb: 0.1
   tomatoRottenProb: 0.4
   healthLoseTime: 5
+  rottenTomato: {fileID: 3286163911610860551, guid: 3258f2d580a763b4481c8e4c2b7824f7, type: 3}
+  normalTomato: {fileID: 3286163911610860551, guid: 04537031645e05b4ebacc292adf23b5f, type: 3}
 --- !u!58 &3407261101838404702
 CircleCollider2D:
   m_ObjectHideFlags: 0

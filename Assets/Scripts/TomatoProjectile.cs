@@ -10,6 +10,8 @@ public class TomatoProjectile : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float maxSpeed;
     [SerializeField] private float minSpeed;
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] tomatoSplatt;
 
     private float speed;
     private Vector2 landingPosition = Vector2.zero;
@@ -35,6 +37,7 @@ public class TomatoProjectile : MonoBehaviour
             {
                 float randomZRotation = Random.Range(0, 360);
                 Instantiate(tomatoSplatterPrefab, transform.position, Quaternion.Euler(0, 0, randomZRotation));
+                AudioManager.instance.PlaySFX(tomatoSplatt[Random.Range(0, 2)]);
             }
             else
             {

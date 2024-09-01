@@ -98,10 +98,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb32119938f1e144aea477acb96d155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tomatoSplatterPrefab: {fileID: 2214263739200214460, guid: 9e6ccd9406ec5114bba113f07d7f905f, type: 3}
+  tomatoSplatterPrefab: {fileID: 9186657984204080940, guid: 9e6ccd9406ec5114bba113f07d7f905f, type: 3}
   pickableTomatoPrefab: {fileID: 140840036729479382, guid: 285ac58d5350a3d46ac24e8999b6c671, type: 3}
   maxSpeed: 10
   minSpeed: 5
+  tomatoSplatt:
+  - {fileID: 8300000, guid: 3b380dfba5511ea40bdffc81d03541bc, type: 3}
+  - {fileID: 8300000, guid: 9ccd8f7174f38194e84f600acaa1b9c1, type: 3}
+  - {fileID: 8300000, guid: ba80520accd7f2c4d9789395d2685dce, type: 3}
 --- !u!96 &-178347673529567905
 TrailRenderer:
   serializedVersion: 3

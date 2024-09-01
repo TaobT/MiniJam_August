@@ -27,23 +27,12 @@ public class BossBehavior : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float rotationModifier;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip bossLaugh;
+
 
     private GameObject spawnedBullet;
     private float timer;
-
-    private void Start()
-    {
-        int random = Random.Range(0, 1);
-
-        if (random == 0)
-        {
-            CirclePatern();
-        }
-        else
-        {
-            RandomPatern();
-        }
-    }
 
     private void Update()
     {
@@ -51,6 +40,7 @@ public class BossBehavior : MonoBehaviour
         {
             minRandomMoveTime = 2;
             maxRandomMoveTime = 5;
+            AudioManager.instance.PlaySFX(bossLaugh);
         }
 
         float randomMoveTime = Random.Range(minRandomMoveTime, maxRandomMoveTime);
@@ -123,7 +113,7 @@ public class BossBehavior : MonoBehaviour
 
         for (int i = 0; i < rottenTomatoSpawnAmount; i++)
         {
-            Vector2 randomSpawnPosition = new Vector3(Random.Range(-11, 11), 6);
+            Vector2 randomSpawnPosition = new Vector3(Random.Range(-18, 18), 6);
             Instantiate(rottenTomatoPrefab, randomSpawnPosition, Quaternion.identity);
         }
     }

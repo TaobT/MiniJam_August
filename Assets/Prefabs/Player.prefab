@@ -196,14 +196,20 @@ MonoBehaviour:
   tomatoSpeed: 10
   rottenSpeed: 5
   tomatoHeal: 1
+  powerUpDuration: 5
+  powerDownDuration: 5
   rb: {fileID: 5221909928083657815}
   tr: {fileID: 9053838825738826301}
   sr: {fileID: 7552695354243712128}
   spritePowerUp: {fileID: 3286163911610860551, guid: 1ade4320311e98545ae4a57145373114, type: 3}
   spriteNormal: {fileID: 3286163911610860551, guid: c20039df925a9fe4ea90542c1785c413, type: 3}
-  powerUpDuration: 5
-  powerDownDuration: 5
   health: {fileID: 5826605343362858893}
+  playerCam: {fileID: 0}
+  footsteps:
+  - {fileID: 8300000, guid: 3c6d6d26a933ef2449eda030357f6985, type: 3}
+  - {fileID: 8300000, guid: ae0fcb5eebc3f064c88ee1753d4b62a6, type: 3}
+  powerUp: {fileID: 8300000, guid: 96d9cb75d124a7e40a68c9f5ecba062c, type: 3}
+  timeBeforeNextAudio: 0.5
 --- !u!61 &459506362803676077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -377,6 +383,9 @@ MonoBehaviour:
   health: 10
   isPlayer: 1
   isBoss: 0
+  victoryTimeline: {fileID: 0}
+  player: {fileID: 2979607869744526731}
+  boss: {fileID: 0}
   currentHealth: 0
 --- !u!1 &4174624610300329837
 GameObject:
@@ -427,6 +436,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1296953897890361354}
   bulletPrefab: {fileID: 2501138708763681342, guid: edffb48f2625ae64baedca8f19c77b8d, type: 3}
   fireRate: 0
+  knifeShoot: {fileID: 8300000, guid: 028b61c3f75d5a447ae6e9cfe52460bc, type: 3}
 --- !u!1 &4555098401403454880
 GameObject:
   m_ObjectHideFlags: 0

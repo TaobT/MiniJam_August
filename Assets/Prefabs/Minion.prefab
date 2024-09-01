@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ef000412cb131459dc4cf9c60c440c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
 --- !u!114 &2241638410509673406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   health: 3
   isPlayer: 0
   isBoss: 0
+  isMinion: 1
   victoryTimeline: {fileID: 0}
   player: {fileID: 0}
   boss: {fileID: 0}

@@ -19,6 +19,9 @@ public class Tomato : MonoBehaviour
     [SerializeField] private float tomatoRottenProb = 0.4f;
     [Space]
     [SerializeField] private float healthLoseTime = 5f;
+    [Space]
+    [SerializeField] private Sprite rottenTomato;
+    [SerializeField] private Sprite normalTomato;
 
     PlayerMovement playerMovement;
     private void Awake()
@@ -29,19 +32,6 @@ public class Tomato : MonoBehaviour
     private void Start()
     {
         if (pickRandomTypeAtStart) SelectRandomTomatoType();
-
-        switch (type)
-        {
-            case TomatoType.Speed:
-                _spriteRenderer.color = new Color(1, 0, 0);
-                break;
-            case TomatoType.Healing:
-                _spriteRenderer.color = new Color(1, 0, 0.2f);
-                break;
-            case TomatoType.Rotten:
-                _spriteRenderer.color = new Color(0.5f, 0, 0);
-                break;
-        }
     }
 
     private void Update()
@@ -49,6 +39,17 @@ public class Tomato : MonoBehaviour
         if(transform.position.y <= -6f)
         {
             Destroy(gameObject);
+        }
+
+        switch(type)
+        {
+            case TomatoType.Speed:
+                _spriteRenderer.sprite = normalTomato;
+                break;
+
+            case TomatoType.Rotten:
+                _spriteRenderer.sprite = rottenTomato;
+                break;
         }
     }
 

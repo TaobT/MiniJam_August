@@ -133,6 +133,8 @@ MonoBehaviour:
   tomatoHealProb: 0.1
   tomatoRottenProb: 0.4
   healthLoseTime: 5
+  rottenTomato: {fileID: 3286163911610860551, guid: 44d10d0ae0cfba64196f89e44eb60c73, type: 3}
+  normalTomato: {fileID: 3286163911610860551, guid: 04537031645e05b4ebacc292adf23b5f, type: 3}
 --- !u!61 &4143272354780806522
 BoxCollider2D:
   m_ObjectHideFlags: 0

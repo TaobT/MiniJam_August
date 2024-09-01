@@ -11,6 +11,9 @@ public class Shooting : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float fireRate;
     private float fireTimer;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip knifeShoot;
  
     private void Update()
     {
@@ -37,5 +40,6 @@ public class Shooting : MonoBehaviour
     private void Shoot()
     {
         Instantiate(bulletPrefab, bulletSpawnPoint.position, transform.rotation);
+        AudioManager.instance.PlaySFX(knifeShoot);
     }
 }
