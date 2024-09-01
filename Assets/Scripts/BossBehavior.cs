@@ -35,6 +35,11 @@ public class BossBehavior : MonoBehaviour
     private float timer;
     private bool halfWay = false;
 
+    private void Start()
+    {
+        DirectPatern();
+    }
+
     private void Update()
     {
         if (bossHealth.currentHealth < 50 && halfWay == false)
@@ -47,7 +52,7 @@ public class BossBehavior : MonoBehaviour
 
         float randomMoveTime = Random.Range(minRandomMoveTime, maxRandomMoveTime);
 
-        int randomMove = Random.Range(0, 5);
+        int randomMove = Random.Range(0, 6);
 
         if (randomMoveTimer <= 0)
         {
@@ -69,6 +74,9 @@ public class BossBehavior : MonoBehaviour
             } else if(randomMove == 4)
             {
                 SpawnMinion();
+            } else if(randomMove == 5)
+            {
+                DirectPatern();
             }
 
             randomMoveTimer = randomMoveTime;
@@ -139,5 +147,14 @@ public class BossBehavior : MonoBehaviour
             minionPrefab.GetComponent<Minions>().speed = Random.Range(2, 4);
             Instantiate(minionPrefab, postion, Quaternion.identity);
         }
+    }
+
+    private void DirectPatern()
+    {
+        Boss.instance.angleSpread = 45f;
+        Boss.instance.oscillate = false;
+        Boss.instance.stagger = false;
+        Boss.instance.projectilesPerBurst = 5;
+        Boss.instance.Attack();
     }
 }

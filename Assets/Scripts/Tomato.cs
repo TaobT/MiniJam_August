@@ -22,6 +22,7 @@ public class Tomato : MonoBehaviour
     [Space]
     [SerializeField] private Sprite rottenTomato;
     [SerializeField] private Sprite normalTomato;
+    [SerializeField] private Sprite healTomato;
 
     PlayerMovement playerMovement;
     private void Awake()
@@ -49,6 +50,9 @@ public class Tomato : MonoBehaviour
 
             case TomatoType.Rotten:
                 _spriteRenderer.sprite = rottenTomato;
+                break;
+            case TomatoType.Healing:
+                _spriteRenderer.sprite = healTomato;
                 break;
         }
     }
@@ -78,12 +82,12 @@ public class Tomato : MonoBehaviour
 
     private void SelectRandomTomatoType()
     {
-        float randomValue = Random.value;
-        if (randomValue <= tomatoSpeedProb)
+        int randomValue = Random.Range(0,6);
+        if (randomValue == 0 || randomValue == 1)
         {
             type = TomatoType.Speed;
         }
-        else if (randomValue <= tomatoSpeedProb + tomatoHealProb)
+        else if (randomValue == 2)
         {
             type = TomatoType.Healing;
         }
