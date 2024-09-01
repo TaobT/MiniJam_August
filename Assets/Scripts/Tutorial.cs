@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject CutScene;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(Input.anyKeyDown)
+        {
+            CutScene.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }

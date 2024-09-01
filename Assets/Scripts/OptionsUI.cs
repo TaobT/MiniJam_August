@@ -16,6 +16,7 @@ public class OptionsUI : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private AudioMixer SFXMixer;
     [SerializeField] private Slider SFXSlider;
+    [SerializeField] private bool isInGame = true;
 
     public static OptionsUI instance;
 
@@ -26,8 +27,6 @@ public class OptionsUI : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1f;
-
         if(PlayerPrefs.HasKey("musicVolume"))
         {
             LoadVolume();
@@ -40,15 +39,20 @@ public class OptionsUI : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if(Input.GetKeyDown(KeyCode.Escape) && !isPaused && isInGame)
         {
-            pauseGameObject.SetActive(true);
-            isPaused = true;
-            Time.timeScale = 0f;
-        } else if(Input.GetKeyDown(KeyCode.Escape) && isPaused)
+            Pause();
+        } else if(Input.GetKeyDown(KeyCode.Escape) && isPaused && isInGame)
         {
             Unpause();
         }
+    }
+
+    public void Pause()
+    {
+        pauseGameObject.SetActive(true);
+        isPaused = true;
+        Time.timeScale = 0f;
     }
 
     public void Unpause()

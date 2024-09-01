@@ -32,7 +32,7 @@ public class Health : MonoBehaviour
 
         if(isBoss)
         {
-            AudioManager.instance.PlaySFX(bossDamage[Random.Range(0, 1)], 0.5f);
+            AudioManager.instance.PlaySFX(bossDamage[Random.Range(0, 1)], 1f);
         }
 
         if(currentHealth <= 0 && isPlayer) 
