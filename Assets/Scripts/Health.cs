@@ -5,6 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int health;
+    [SerializeField] private bool isPlayer = false;
+    [SerializeField] private bool isBoss = false;
     public int currentHealth;
 
     private void Start()
@@ -16,8 +18,13 @@ public class Health : MonoBehaviour
     {
         currentHealth -= damage;
 
-        if(currentHealth <= 0 ) 
-        { 
+        if(currentHealth <= 0 && isPlayer) 
+        {
+            Ending.instance.DefeatUI();
+            Destroy(gameObject);
+        } else if(currentHealth < 0 && isBoss)
+        {
+            Ending.instance.VictoryUI();
             Destroy(gameObject);
         }
     }

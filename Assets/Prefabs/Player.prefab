@@ -375,6 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  isPlayer: 1
+  isBoss: 0
   currentHealth: 0
 --- !u!1 &4174624610300329837
 GameObject:
