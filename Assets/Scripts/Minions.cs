@@ -10,6 +10,11 @@ public class Minions : MonoBehaviour
 
     private void Update()
     {
+        if (OptionsUI.instance.isPaused)
+        {
+            return;
+        }
+
         distance = Vector2.Distance(transform.position, PlayerMovement.Instance.transform.position);
         Vector2 direction = PlayerMovement.Instance.transform.position - transform.position;
         direction.Normalize();
@@ -21,6 +26,11 @@ public class Minions : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (OptionsUI.instance.isPaused)
+        {
+            return;
+        }
+
         Health health = collision.gameObject.GetComponent<Health>();
 
         if (collision.gameObject.tag == "Player" && !isAttacking)
@@ -33,6 +43,11 @@ public class Minions : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (OptionsUI.instance.isPaused)
+        {
+            return;
+        }
+
         Health health = collision.gameObject.GetComponent<Health>();
 
         if (collision.gameObject.tag == "Player" && !isAttacking)

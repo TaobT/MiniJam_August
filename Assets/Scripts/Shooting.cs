@@ -17,7 +17,12 @@ public class Shooting : MonoBehaviour
  
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && fireTimer <= 0)
+        if (OptionsUI.instance.isPaused)
+        {
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0) && fireTimer <= 0)
         {
             Shoot();
             fireTimer = fireRate;

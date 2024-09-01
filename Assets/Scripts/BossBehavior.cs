@@ -34,14 +34,21 @@ public class BossBehavior : MonoBehaviour
     private GameObject spawnedBullet;
     private float timer;
     private bool halfWay = false;
+    private bool isStart;
 
     private void Start()
     {
         DirectPatern();
+        isStart = true;
     }
 
     private void Update()
     {
+        if (OptionsUI.instance.isPaused)
+        {
+            return;
+        }
+
         if (bossHealth.currentHealth < 50 && halfWay == false)
         {
             minRandomMoveTime = 2;
@@ -54,7 +61,7 @@ public class BossBehavior : MonoBehaviour
 
         int randomMove = Random.Range(0, 6);
 
-        if (randomMoveTimer <= 0)
+        if (randomMoveTimer <= 0 && isStart == false)
         {
             if (randomMove == 0)
             {
@@ -156,5 +163,6 @@ public class BossBehavior : MonoBehaviour
         Boss.instance.stagger = false;
         Boss.instance.projectilesPerBurst = 5;
         Boss.instance.Attack();
+        isStart = false;
     }
 }

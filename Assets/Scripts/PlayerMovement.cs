@@ -55,6 +55,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(OptionsUI.instance.isPaused)
+        {
+            return;
+        }
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         mousePos = playerCam.ScreenToWorldPoint(Input.mousePosition);
